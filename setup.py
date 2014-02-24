@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import sys
+
 try:
     from setuptools import setup, find_packages
 except ImportError:
@@ -10,6 +12,10 @@ except ImportError:
 
 with open('README.txt') as file:
     long_description = file.read()
+
+extra = {}
+if sys.version_info >= (3,):
+    extra['use_2to3'] = True
 
 setup(
     name="galileo",
@@ -26,6 +32,7 @@ setup(
     install_requires=[
         "requests",
         "pyusb>=1a"],  # version 1a doesn't exists, but is smaller than 1.0.0a2
+    test_suite="tests",
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'License :: OSI Approved :: GNU Lesser General Public License v3 or'
@@ -42,4 +49,5 @@ setup(
             'galileo = galileo.main:main'
         ],
     },
+    **extra
 )

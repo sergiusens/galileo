@@ -1,0 +1,6 @@
+name: galileo
+version: 0.5dev-1
+vendor: sergio.schvezov@canonical.com
+services:
+    - name: daemon
+      start: python ./usr/bin/galileo

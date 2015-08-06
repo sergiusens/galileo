@@ -1,0 +1,6 @@
+parts:
+    galileo:
+        plugin: python2-project
+        source: https://bitbucket.org/benallard/galileo
+        source-type: mercurial
+snappy-metadata: meta

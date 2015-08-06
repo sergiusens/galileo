@@ -1,0 +1,10 @@
+build/
+dist/
+*.egg-info
+**.pyc
+**.snap
+image/
+parts/
+snap/
+stage/
+
